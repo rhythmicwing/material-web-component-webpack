@@ -4,10 +4,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Main Page</title>
+        <title>Checkbox Page</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="indexc6f5fbeef8ed1db07f72.js"></script><script defer src="topAppBarf08b0d9bbfaf075d2551.js"></script><script defer src="nave10f5f21533c442b7207.js"></script></head>
+    <script defer src="topAppBarf08b0d9bbfaf075d2551.js"></script><script defer src="nave10f5f21533c442b7207.js"></script><script defer src="checkboxe5209b95f86c013d76ab.js"></script></head>
     <body>
 
         <navigation><aside class="mdc-drawer mdc-drawer--modal">
@@ -182,42 +182,72 @@
 </topappbar>
 
         <main class="mdc-top-app-bar--fixed-adjust">
-            <div class="container">
-                <img id="laughImg" alt="" />
-                <h3>Don't Laugh Challenge</h3>
-                <div id="joke" class="joke"></div>
-                <!-- <button id="drawerTrigger" class="btn">Open Drawer</button> -->
-            </div>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
+            <section class="main-content">
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Checkbox</h2>
+                    <div class="demo-group">
+                        <div class="mdc-form-field">
+                            <div class="mdc-checkbox mdc-checkbox--touch">
+                                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1"/>
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
+                                </div>
+                                <div class="mdc-checkbox__ripple"></div>
+                                <div class="mdc-checkbox__focus-ring"></div>
+                            </div>
+                            <label for="checkbox-1">Checkbox</label>
+                        </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-checkbox mdc-checkbox--touch">
+                                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-2" checked/>
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
+                                </div>
+                                <div class="mdc-checkbox__ripple"></div>
+                                <div class="mdc-checkbox__focus-ring"></div>
+                            </div>
+                            <label for="checkbox-2">Checked Checkbox</label>
+                        </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-checkbox mdc-checkbox--disabled">
+                                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-3" disabled/>
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
+                                </div>
+                                <div class="mdc-checkbox__ripple"></div>
+                                <div class="mdc-checkbox__focus-ring"></div>
+                            </div>
+                            <label for="checkbox-3">Disabled Checkbox</label>
+                        </div>
+
+                        <div class="mdc-form-field">
+                            <div class="mdc-checkbox mdc-checkbox--touch">
+                                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-4" data-indeterminate="true"/>
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
+                                </div>
+                                <div class="mdc-checkbox__ripple"></div>
+                                <div class="mdc-checkbox__focus-ring"></div>
+                            </div>
+                            <label for="checkbox-4">Indeterminate Checkbox</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

@@ -4,10 +4,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Main Page</title>
+        <title>Form Demo Page</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script defer src="indexc6f5fbeef8ed1db07f72.js"></script><script defer src="topAppBarf08b0d9bbfaf075d2551.js"></script><script defer src="nave10f5f21533c442b7207.js"></script></head>
+    <script defer src="formdemo4adce35e48f59b6bd481.js"></script><script defer src="topAppBarf08b0d9bbfaf075d2551.js"></script><script defer src="nave10f5f21533c442b7207.js"></script></head>
     <body>
 
         <navigation><aside class="mdc-drawer mdc-drawer--modal">
@@ -182,42 +182,123 @@
 </topappbar>
 
         <main class="mdc-top-app-bar--fixed-adjust">
-            <div class="container">
-                <img id="laughImg" alt="" />
-                <h3>Don't Laugh Challenge</h3>
-                <div id="joke" class="joke"></div>
-                <!-- <button id="drawerTrigger" class="btn">Open Drawer</button> -->
-            </div>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
-            <h3>Don't Laugh Challenge</h3>
+            <section class="main-content">
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Form</h2>
+
+                    <div class="mdc-layout-grid">
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">Type:</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
+                                <div class="mdc-form-field">
+                                    <div class="mdc-radio">
+                                        <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+                                        <div class="mdc-radio__background">
+                                            <div class="mdc-radio__outer-circle"></div>
+                                            <div class="mdc-radio__inner-circle"></div>
+                                        </div>
+                                        <div class="mdc-radio__ripple"></div>
+                                        <div class="mdc-radio__focus-ring"></div>
+                                    </div>
+                                    <label for="radio-1">Radio 1</label>
+                                </div>
+                                <div class="mdc-form-field">
+                                    <div class="mdc-radio">
+                                        <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" checked>
+                                        <div class="mdc-radio__background">
+                                            <div class="mdc-radio__outer-circle"></div>
+                                            <div class="mdc-radio__inner-circle"></div>
+                                        </div>
+                                        <div class="mdc-radio__ripple"></div>
+                                        <div class="mdc-radio__focus-ring"></div>
+                                    </div>
+                                    <label for="radio-2">Radio 2</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">Contact</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Hint text</span>
+                                    <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                                <label class="mdc-text-field mdc-text-field--filled">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Hint text</span>
+                                    <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+
+                                <label class="mdc-text-field mdc-text-field--outlined">
+                                    <span class="mdc-notched-outline">
+                                        <span class="mdc-notched-outline__leading"></span>
+                                        <span class="mdc-notched-outline__notch">
+                                            <span class="mdc-floating-label" id="my-label-id">Your Name</span>
+                                        </span>
+                                        <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                                </label>
+
+                                <label class="mdc-text-field mdc-text-field-icon mdc-text-field--filled mdc-text-field--with-leading-icon">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Your Name</span>
+                                    <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" tabindex="0" role="button">event</i>
+                                    <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+
+                                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--label-floating">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label mdc-floating-label--float-above" id="my-label-id">
+                                        Label in correct place
+                                    </span>
+                                    <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" value="Pre-filled value">
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mdc-layout-grid">
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">1</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+
+                                <label class="mdc-text-field mdc-text-field--textarea">
+                                    <span class="mdc-notched-outline">
+                                      <span class="mdc-notched-outline__leading"></span>
+                                      <span class="mdc-notched-outline__notch">
+                                        <span class="mdc-floating-label" id="my-label-id">Textarea Label</span>
+                                      </span>
+                                      <span class="mdc-notched-outline__trailing"></span>
+                                    </span>
+                                    <span class="mdc-text-field__resizer">
+                                      <textarea class="mdc-text-field__input" aria-labelledby="my-label-id" rows="8"
+                                        cols="40" maxlength="140"></textarea>
+                                    </span>
+                                  </label>
+
+
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">3</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">3</div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </section>
         </main>
+        
     </body>
 </html>
