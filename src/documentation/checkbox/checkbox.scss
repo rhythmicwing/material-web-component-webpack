@@ -1,0 +1,7 @@
+@use "@material/checkbox";
+@use "@material/form-field";
+
+@import '../../styles/common';
+
+@include checkbox.core-styles;
+@include form-field.core-styles;

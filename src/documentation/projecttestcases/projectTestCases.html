@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+
+        <navigation></navigation>
+        <topappbar></topappbar>
+
+        <main class="mdc-top-app-bar--fixed-adjust">
+            <section class="main-content">
+                <div class="mdc-tab-bar" role="tablist">
+                    <div class="mdc-tab-scroller">
+                        <div class="mdc-tab-scroller__scroll-area">
+                            <div class="mdc-tab-scroller__scroll-content">
+                                <a class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="projectIssues.html">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__icon material-icons" aria-hidden="true">bug_report</span>
+                                        <span class="mdc-tab__text-label">Issues</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                    <div class="mdc-tab__focus-ring"></div>
+                                </a>
+                                <a class="mdc-tab" role="tab" aria-selected="true" tabindex="1">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__icon material-icons" aria-hidden="true">science</span>
+                                        <span class="mdc-tab__text-label">Test Cases</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                    <div class="mdc-tab__focus-ring"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Form</h2>
+
+                    <div class="mdc-layout-grid mdc-theme--primary-bg">
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-theme--text-primary-on-light">1</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">2</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">3</div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">3</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

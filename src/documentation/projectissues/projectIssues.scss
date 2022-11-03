@@ -1,0 +1,154 @@
+//@use "../../styles/tt.scss";
+
+// Layout
+@use "@material/layout-grid/mdc-layout-grid";
+
+// Tab Bar
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+
+// Text Field
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+// Card
+@use "@material/card";
+
+// Buttons
+@use "@material/button/styles" as a-style;
+
+// Dialog
+@use "@material/dialog";
+
+// Select
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles" as b-style;
+
+//Table
+@use "@material/checkbox"; // Required only for data table with row selection.
+@use "@material/data-table/data-table";
+
+// Icon Button
+@use "@material/icon-button/styles" as c-style;
+
+
+@import '../../styles/common';
+
+@include textfield.core-styles;
+@include card.core-styles;
+@include dialog.core-styles;
+@include checkbox.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+
+
+
+.tabBarGrid {
+    padding:0;
+}
+
+.issues-card-wrapper {
+    padding: 1rem;
+    //background: #e3e3eb;
+    //background:var(--mdc-theme-surface);
+
+    .issues-card-heading {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+
+        gap: 0.5rem;
+
+        h6 {
+            color:var(--mdc-theme-on-surface);
+        }
+
+        span {
+            color:var(--mdc-theme-on-surface);
+        }
+    }
+
+    .issues-card {
+        margin-top: 0.5rem;
+
+        .issues-card__primary {
+            padding:1rem;
+            .issues-card__title {
+                //padding:1rem;
+                color: var(--mdc-theme-on-surface);
+            }
+            .issues-card__subtitle {
+                color: var(--mdc-theme-on-surface);
+            }
+        }
+        hr {
+            height: 0;
+            //margin: 1rem 0 1rem;
+            margin: 0;
+            border: none;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: var(--mdc-theme-on-surface);
+        }
+    }
+}
+
+.issues-card-dialog-grid {
+    padding:1rem 0;
+
+    .full-width {
+        width:100%;
+    }
+
+    .issues-card-dialog-form-inner {
+        .mdc-layout-grid__cell {
+            &.mdc-layout-grid__cell--span-12 {
+
+            }
+        }
+    }
+}
+
+#uploadTestButton {
+    .mdc-button__icon {
+        margin-left: 4px;
+    }
+}
+
+.upload-test {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+    label {
+        align-items: center;
+
+        .upload-test__input {
+            height: auto;
+
+            &::-webkit-file-upload-button {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .upload-test-button {
+        align-self: stretch;
+        height: auto;
+    }
+}
+
+.mdc-data-table {
+    width: 100%;
+}
+

@@ -1,0 +1,241 @@
+// $primary:#38C1D3;
+// $on-primary: #2c3400;
+// $secondary: #CDDC27;
+// $on-secondary: #2e321b;
+// $background: #10153D;
+// $surface: #10153D;
+// $on-surface: #e5e2da;
+// $error: #ffb4ab;
+// $on-error: #690005;
+
+:root {
+    @media (prefers-color-scheme: light) {
+        --mdc-theme-primary: #006874;
+        --mdc-theme-on-primary: #ffffff;
+        --mdc-theme-secondary: #5c6300;
+        --mdc-theme-on-secondary: #ffffff;
+        --mdc-theme-surface: #fafdfd;
+        --mdc-theme-on-surface: #191c1d;
+        --mdc-theme-background: #fafdfd;
+        --mdc-theme-on-background: #191c1d;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        --mdc-theme-primary: #4fd8eb;
+        --mdc-theme-on-primary: #00363d;
+        --mdc-theme-secondary: #c2d016;
+        --mdc-theme-on-secondary: #2f3300;
+
+        --mdc-theme-surface-base: 195, 7.4%;
+        --mdc-theme-surface-l: 15.6%;
+        --mdc-theme-surface: hsl(var(--mdc-theme-surface-base),var(--mdc-theme-surface-l));
+            --mdc-theme-surface-z1: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 5%));
+            --mdc-theme-surface-z2: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 9%));
+            --mdc-theme-surface-z3: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 13%));
+            --mdc-theme-surface-z4: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 17%));
+            --mdc-theme-surface-z5: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 21%));
+            --mdc-theme-surface-z6: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 25%));
+            --mdc-theme-surface-z7: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 29%));
+            --mdc-theme-surface-z8: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 33%));
+            --mdc-theme-surface-z9: hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 37%));
+
+        --mdc-theme-on-surface: #e1e3e3;
+        --mdc-theme-background: #191c1d;
+        --mdc-theme-on-background: #e1e3e3;
+
+
+        // Others
+        --mdc-outlined-button-outline-color:hsl(var(--mdc-theme-surface-base),calc(var(--mdc-theme-surface-l) + 29%));
+
+    }
+}
+//#9c27b0 purple-ish
+
+@media (prefers-color-scheme: dark) {
+    .mdc-elevation--z1 {
+        background:var(--mdc-theme-surface-z1);
+    }
+    .mdc-elevation--z2 {
+        background:var(--mdc-theme-surface-z2);
+    }
+    .mdc-elevation--z3 {
+        background:var(--mdc-theme-surface-z3);
+    }
+    .mdc-elevation--z4 {
+        background:var(--mdc-theme-surface-z4);
+    }
+    .mdc-elevation--z5 {
+        background:var(--mdc-theme-surface-z5);
+    }
+    .mdc-elevation--z6 {
+        background:var(--mdc-theme-surface-z6);
+    }
+    .mdc-elevation--z7 {
+        background:var(--mdc-theme-surface-z7);
+    }
+
+
+    // Drawer Custom
+    .mdc-drawer {
+        &.mdc-drawer--modal {
+            background:var(--mdc-theme-surface-z1);
+
+            .mdc-drawer__header {
+                background:var(--mdc-theme-surface-z4);
+
+                .mdc-drawer__title {
+                    color:var(--mdc-theme-on-surface);
+                }
+                .mdc-drawer__subtitle {
+                    color:var(--mdc-theme-on-surface);
+                }
+            }
+
+            .mdc-drawer__content {
+                .mdc-deprecated-list-item {
+                    color: var(--mdc-theme-on-surface);
+
+                    .mdc-deprecated-list-item__graphic {
+                        color: var(--mdc-theme-surface-z9);
+                    }
+                }
+                .mdc-deprecated-list-item--activated {
+                    color: var(--mdc-theme-primary);
+
+                    .mdc-deprecated-list-item__graphic {
+                        color: var(--mdc-theme-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    // Top App Bar Custom
+    .mdc-top-app-bar {
+        background-color: var(--mdc-theme-primary);
+    }
+
+    .mdc-top-app-bar__title {
+        color: var(--mdc-theme-on-primary);
+    }
+
+    // Tab Custom
+    .mdc-tab {
+        .mdc-tab__icon, .mdc-tab__text-label {
+            color: var(--mdc-theme-on-surface);
+        }
+
+        &.mdc-tab--active {
+            .mdc-tab__icon, .mdc-tab__text-label {
+                color: var(--mdc-theme-primary);
+            }
+        }
+    }
+
+
+    // Table Custom
+    .mdc-data-table__header-cell {
+        @media (prefers-color-scheme: dark) {
+            color: var(--mdc-theme-on-surface);
+        }
+    }
+
+    .mdc-data-table__pagination-total, .mdc-data-table__pagination-rows-per-page-label, .mdc-data-table__cell {
+        @media (prefers-color-scheme: dark) {
+            color: var(--mdc-theme-on-surface);
+        }
+    }
+
+
+    // Dialog Custom
+    .mdc-dialog .mdc-dialog__surface {
+        background-color:var(--mdc-theme-surface-z3);
+    }
+
+    .mdc-dialog .mdc-dialog__title {
+        color: var(--mdc-theme-on-surface);
+    }
+
+    .mdc-dialog__actions {
+        gap: 1rem;
+    }
+
+    // Dialog Scrim Custom
+    .mdc-dialog .mdc-dialog__scrim {
+        background-color: rgba(0, 0, 0, 0.80);
+    }
+
+
+
+    // Text Field Custom
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+        border-color: var(--mdc-theme-surface-z5);
+        background: var(--mdc-theme-surface-z1);
+    }
+
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading, 
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch, 
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+        border-color: var(--mdc-theme-surface-z7);
+        background: var(--mdc-theme-surface-z1);
+    }
+
+    .mdc-text-field--outlined .mdc-notched-outline {
+        z-index:-1;
+    }
+
+    .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+        color: var(--mdc-theme-surface-z9);
+    }
+
+    .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+        color: var(--mdc-theme-primary);
+    }
+
+    .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+        color: var(--mdc-theme-on-surface);
+    }
+
+
+
+    // Select Custom
+    .mdc-select--outlined:not(.mdc-select--disabled) .mdc-notched-outline__leading,
+    .mdc-select--outlined:not(.mdc-select--disabled) .mdc-notched-outline__notch,
+    .mdc-select--outlined:not(.mdc-select--disabled) .mdc-notched-outline__trailing {
+        border-color: var(--mdc-theme-surface-z5);
+        background: var(--mdc-theme-surface-z1);
+    }
+
+    .mdc-select--outlined:not(.mdc-select--disabled):not(.mdc-select--focused) .mdc-select__anchor:hover .mdc-notched-outline .mdc-notched-outline__leading, 
+    .mdc-select--outlined:not(.mdc-select--disabled):not(.mdc-select--focused) .mdc-select__anchor:hover .mdc-notched-outline .mdc-notched-outline__notch, 
+    .mdc-select--outlined:not(.mdc-select--disabled):not(.mdc-select--focused) .mdc-select__anchor:hover .mdc-notched-outline .mdc-notched-outline__trailing {
+        border-color: var(--mdc-theme-surface-z7);
+        background: var(--mdc-theme-surface-z1);
+    }
+
+    .mdc-select:not(.mdc-select--disabled) .mdc-floating-label {
+        color: var(--mdc-theme-surface-z9);
+    }
+
+    .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+        color: var(--mdc-theme-primary);
+    }
+
+    .mdc-select:not(.mdc-select--disabled) .mdc-select__selected-text {
+        color: var(--mdc-theme-on-surface);
+    }
+
+    .mdc-select:not(.mdc-select--disabled) .mdc-select__dropdown-icon {
+        fill: var(--mdc-theme-surface-z9);
+    }
+
+    .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-select__dropdown-icon {
+        fill: var(--mdc-theme-primary);
+    }
+}
+
+
+
+

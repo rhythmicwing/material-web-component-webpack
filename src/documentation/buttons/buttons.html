@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+
+        <navigation></navigation>
+        <topappbar></topappbar>
+
+        <main class="mdc-top-app-bar--fixed-adjust">
+            <section class="main-content">
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Text Button</h2>
+                    <div class="demo-group">
+                        <button class="mdc-button mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Text Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--icon-leading mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Text Button plus icon</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Outlined Button</h2>
+                    <div class="demo-group">
+                        <button class="mdc-button mdc-button--outlined mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Outlined Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--outlined mdc-button--icon-leading mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Outlined Button plus Icon</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Raised Button</h2>
+                    <div class="demo-group">
+                        <button class="mdc-button mdc-button--raised mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Raised Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--raised mdc-button--icon-leading mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Raised Button plus Icon</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Unelevated Button</h2>
+                    <div class="demo-group">
+                        <button class="mdc-button mdc-button--unelevated mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Unelevated Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--unelevated mdc-button--icon-leading mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Unelevated Button plus Icon</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Disabled Button</h2>
+                    <div class="demo-group wrap">
+                        <button class="mdc-button mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Disabled Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--icon-leading mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Text Button plus icon</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--outlined mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Outlined Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--outlined mdc-button--icon-leading mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Outlined Button plus Icon</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--raised mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Raised Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--raised mdc-button--icon-leading mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Raised Button plus Icon</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--unelevated mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Unelevated Button</span>
+                        </button>
+
+                        <button class="mdc-button mdc-button--unelevated mdc-button--icon-leading mdc-button--touch" disabled>
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Unelevated Button plus Icon</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Trailing Icon Button</h2>
+                    <div class="demo-group">
+                        <button class="mdc-button mdc-button--icon-trailing mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Trailing Icon Button</span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+                        </button>
+
+                        <button class="mdc-button mdc-button--outlined mdc-button--icon-trailing mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Trailing Icon Button</span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                        </button>
+
+                        <button class="mdc-button mdc-button--raised mdc-button--icon-trailing mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Trailing Icon Button</span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                        </button>
+
+                        <button class="mdc-button mdc-button--unelevated mdc-button--icon-trailing mdc-button--touch">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__focus-ring"></span>
+                            <span class="mdc-button__touch"></span>
+                            <span class="mdc-button__label">Trailing Icon Button</span>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

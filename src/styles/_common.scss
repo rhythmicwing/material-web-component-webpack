@@ -1,0 +1,59 @@
+//@use "@material/typography/mdc-typography";
+//@import "./theme/theme1/variables";
+//@use "@material/theme";
+@import "./reset";
+@import "./theme/theme1/variables";
+//@import "./theme/theme1/variables-dark";
+@import "../../node_modules/@material/typography/mdc-typography";
+
+html {
+    background-color: var(--mdc-theme-background);
+}
+
+table {
+    thead, tbody {
+        tr {
+            th, td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.mdc-icon-button.actionsButton {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+}
+
+.main-content {
+    padding:1rem;
+}
+
+.content-section {
+    padding:1rem;
+    margin-bottom: 1rem;
+}
+
+.demo-group {
+    display: flex;
+    gap: 0.5rem;
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
