@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Popperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <!-- Tempus Dominus JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/js/tempus-dominus.js" crossorigin="anonymous"></script>
+
+    <!-- Tempus Dominus Styles -->
+    <link href="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/css/tempus-dominus.css" rel="stylesheet" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <navigation></navigation>
+    <topappbar></topappbar>
+
+    <main class="mdc-top-app-bar--fixed-adjust">
+        <section class="main-content">
+            <div class="content-section mdc-elevation--z3">
+                <h2 class="mdc-typography--headline6">Select Input Single</h2>
+                <div class="dateRangePicker">
+                    <div id="datetimepickerinput" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                        <input id="datetimepickerinputInput" type="text" class="form-control" data-td-target="#datetimepickerinput" />
+                        <span class="input-group-text" data-td-target="#datetimepickerinput" data-td-toggle="datetimepicker">
+                            <span class="fa-solid fa-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <input id="datetimepickerinput2" type="text" />
+
+                <div class="dateRangePicker">
+                    <label for="linkedPickers1Input" class="form-label">From</label>
+                    <div id="linkedPickers1" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                        <input id="linkedPickers1Input" type="text" class="form-control" data-td-target="#linkedPickers1" />
+                        <span class="input-group-text" data-td-target="#linkedPickers1" data-td-toggle="datetimepicker">
+                            <span class="fa-solid fa-calendar"></span>
+                        </span>
+                    </div>
+
+                    <!-- Date Picker 2 -->
+                    <label for="linkedPickers2Input" class="form-label">To</label>
+                    <div class="input-group log-event" id="linkedPickers2" data-td-target-input="nearest" data-td-target-toggle="nearest">
+                        <input id="linkedPickers2Input" type="text" class="form-control" data-td-target="#linkedPickers2"/>
+                        <span class="input-group-text" data-td-target="#linkedPickers2" data-td-toggle="datetimepicker">
+                            <span class="fa-solid fa-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        const linkedPicker1Element = document.getElementById('linkedPickers1');
+        const linked1 = new tempusDominus.TempusDominus(linkedPicker1Element);
+        const linked2 = new tempusDominus.TempusDominus(document.getElementById('linkedPickers2'), {
+            useCurrent: false
+        });
+        // using event listeners
+        linkedPicker1Element.addEventListener(tempusDominus.Namespace.events.change, (e) => {
+            linked2.updateOptions({
+                allowInputToggle: false,
+                restrictions: {
+                    minDate: e.detail.date
+                }
+            });
+        });
+        // using subscribe method
+        const subscription = linked2.subscribe(tempusDominus.Namespace.events.change, (e) => {
+            linked1.updateOptions({
+                allowInputToggle: false,
+                restrictions: {
+                    maxDate: e.date
+                }
+            });
+        });
+
+
+
+        window.datetimepicker1 = new tempusDominus.TempusDominus(
+            document.getElementById('datetimepickerinput'),
+            {
+            //put your config here
+                useCurrent: false,
+                display: {
+                    // 'clock' | 'calendar' | 'months' | 'years' | 'decades'
+                    viewMode: 'calendar',
+                    // 'top' | 'bottom'
+                    toolbarPlacement: 'bottom',
+                    keepOpen: false,
+                    // enable/disable buttons
+                    buttons: {
+                        today: true,
+                        clear: true,
+                        close: true
+                    },
+                    // enable/disable components
+                    components: {
+                        calendar: true,
+                        date: true,
+                        month: true,
+                        year: true,
+                        decades: true,
+                        clock: true,
+                        hours: true,
+                        minutes: true,
+                        seconds: false,
+                        useTwentyfourHour: false
+                    },
+                },
+                allowInputToggle: true,
+            }
+        );
+
+        window.datetimepicker2 = new tempusDominus.TempusDominus(
+            document.getElementById('datetimepickerinput2'),
+            {
+                // enable/disable dates & times
+                restrictions: {
+                    minDate: undefined,
+                    maxDate: undefined,
+                    disabledDates: [],
+                    enabledDates: [],
+                    daysOfWeekDisabled: [],
+                    disabledTimeIntervals: [],
+                    disabledHours: [],
+                    enabledHours: []
+                },
+
+                // display options
+                display: {
+                    icons: {
+                        // "icons" or "sprites"
+                        type: 'icons',
+                        time: 'fa-solid fa-clock',
+                        date: 'fa-solid fa-calendar',
+                        up: 'fa-solid fa-arrow-up',
+                        down: 'fa-solid fa-arrow-down',
+                        previous: 'fa-solid fa-chevron-left',
+                        next: 'fa-solid fa-chevron-right',
+                        today: 'fa-solid fa-calendar-check',
+                        clear: 'fa-solid fa-trash',
+                        close: 'fa-solid fa-xmark'
+                    },
+                    // display the date and time pickers side by side
+                    sideBySide: false,
+                    // display an additional column with the calendar week for that week
+                    calendarWeeks: false,
+                    // 'clock' | 'calendar' | 'months' | 'years' | 'decades'
+                    viewMode: 'calendar',
+                    // 'top' | 'bottom'
+                    toolbarPlacement: 'bottom',
+                    keepOpen: false,
+                    // enable/disable buttons
+                    buttons: {
+                        today: true,
+                        clear: true,
+                        close: true
+                    },
+                    // enable/disable components
+                    components: {
+                        calendar: true,
+                        date: true,
+                        month: true,
+                        year: true,
+                        decades: true,
+                        clock: true,
+                        hours: true,
+                        minutes: true,
+                        seconds: false,
+                        useTwentyfourHour: false
+                    },
+                    // inline mode
+                    inline: false
+                },
+
+                // // control how much the minutes are changed by
+                // stepping: 1,
+
+                // // use the current date/time
+                // useCurrent: true,
+
+                // defaultDate: undefined,
+
+                // localization: {
+                //     today: 'Go to today',
+                //     clear: 'Clear selection',
+                //     close: 'Close the picker',
+                //     selectMonth: 'Select Month',
+                //     previousMonth: 'Previous Month',
+                //     nextMonth: 'Next Month',
+                //     selectYear: 'Select Year',
+                //     previousYear: 'Previous Year',
+                //     nextYear: 'Next Year',
+                //     selectDecade: 'Select Decade',
+                //     previousDecade: 'Previous Decade',
+                //     nextDecade: 'Next Decade',
+                //     previousCentury: 'Previous Century',
+                //     nextCentury: 'Next Century',
+                //     pickHour: 'Pick Hour',
+                //     incrementHour: 'Increment Hour',
+                //     decrementHour: 'Decrement Hour',
+                //     pickMinute: 'Pick Minute',
+                //     incrementMinute: 'Increment Minute',
+                //     decrementMinute: 'Decrement Minute',
+                //     pickSecond: 'Pick Second',
+                //     incrementSecond: 'Increment Second',
+                //     decrementSecond: 'Decrement Second',
+                //     toggleMeridiem: 'Toggle Meridiem',
+                //     selectTime: 'Select Time',
+                //     selectDate: 'Select Date',
+                //     dayViewHeaderFormat: { month: 'long', year: '2-digit' },
+                //     locale: 'default',
+                //     // 0 = Sunday, 6 = Saturday
+                //     startOfTheWeek: 0
+                // },
+
+                // keepInvalid: false,
+
+                // debug: false,
+
+                // // show the date picker on focus
+                // allowInputToggle: false,
+
+                // viewDate: new DateTime(),
+
+                // multipleDates: false,
+
+                // multipleDatesSeparator: '; ',
+
+                // promptTimeOnDateChange: false,
+
+                // promptTimeOnDateChangeTransitionDelay: 200,
+
+                // // provide developers a place to store extra information about the picker
+                // meta: {},
+
+                // change the target container
+                //container: undefined,
+            }
+        );
+
+
+
+    </script>
+</body>
+
+</html>

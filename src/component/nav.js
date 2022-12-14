@@ -20,7 +20,7 @@ const list = new MDCList(document.querySelector('.drawerNav'));
 
 import {MDCRipple} from '@material/ripple';
 const listItemRipples = list.listElements.map((listItemEl) => new MDCRipple(listItemEl));
-
+ 
 
 
 

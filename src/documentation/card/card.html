@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+
+        <navigation></navigation>
+        <topappbar></topappbar>
+
+        <main class="mdc-top-app-bar--fixed-adjust">
+            <section class="main-content">
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Only Text</h2>
+                    <div class="demo-group wrap">
+                        <div class="mdc-card demo-card mdc-elevation--z4">
+                            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                                <div class="demo-card__primary">
+                                    <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                                    <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                </div>
+                                <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised mdc-button--icon-leading mdc-button--touch">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__focus-ring"></span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">auto_stories</i>
+                                        <span class="mdc-button__touch"></span>
+                                        <span class="mdc-button__label">Read</span>
+                                    </button>
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--outlined mdc-button--touch">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__focus-ring"></span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                                        <span class="mdc-button__touch"></span>
+                                        <span class="mdc-button__label">Bookmark</span>
+                                    </button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                                        <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        share
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        more_vert
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Horizontal Media + Text</h2>
+                    <div class="demo-group wrap">
+                        <div class="mdc-card demo-card demo-ui-control mdc-elevation--z4">
+                            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                                <div class="mdc-card__media mdc-card__media--square demo-card__media" style="background-image: url('https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg');"></div>
+                                <div class="demo-card__primary">
+                                    <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                                    <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                </div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Read</button>
+                                <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Bookmark</button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites" data-mdc-ripple-is-unbounded="true">
+                                    <div class="mdc-icon-button__ripple"></div>
+                                    <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                                    <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                                </button>
+                                <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">
+                                    <div class="mdc-icon-button__ripple"></div>
+                                    share
+                                </button>
+                                <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">
+                                    <div class="mdc-icon-button__ripple"></div>
+                                    more_vert
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Big Media Var 1</h2>
+                    <div class="demo-group wrap">
+                        <div class="mdc-card demo-card mdc-elevation--z4">
+                            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg');"></div>
+                                <div class="demo-card__primary">
+                                    <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                                    <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                </div>
+                                <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--raised mdc-button--icon-leading mdc-button--touch">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__focus-ring"></span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">auto_stories</i>
+                                        <span class="mdc-button__touch"></span>
+                                        <span class="mdc-button__label">Read</span>
+                                    </button>
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--outlined mdc-button--touch">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__focus-ring"></span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                                        <span class="mdc-button__touch"></span>
+                                        <span class="mdc-button__label">Bookmark</span>
+                                    </button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                                        <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        share
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        more_vert
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Big Media Var 2</h2>
+                    <div class="demo-group wrap">
+                        <div class="mdc-card mdc-elevation--z4 demo-card demo-basic-with-text-over-media">
+                            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg');">
+                                    <div class="mdc-card__media-content demo-card__media-content">
+                                    <div class="demo-card__primary">
+                                        <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                                        <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--unelevated mdc-button--icon-trailing mdc-button--touch">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__focus-ring"></span>
+                                        <span class="mdc-button__touch"></span>
+                                        <span class="mdc-button__label">Read</span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">auto_stories</i>
+                                    </button>
+
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button mdc-button--outlined mdc-button--icon-trailing mdc-button--touch">
+                                        <span class="mdc-button__ripple"></span>
+                                        <span class="mdc-button__focus-ring"></span>
+                                        <span class="mdc-button__touch"></span>
+                                        <span class="mdc-button__label">Bookmark</span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+                                    </button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                                        <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        share
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        more_vert
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Big Media Var 3</h2>
+                    <div class="demo-group wrap">
+                        <div class="mdc-card demo-card mdc-elevation--z4">
+                            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg');"></div>
+                                <div class="demo-card__primary">
+                                    <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                                    <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                </div>
+                                <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Read</button>
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Bookmark</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section mdc-elevation--z3">
+                    <h2 class="mdc-typography--headline6">Big Media Var 4</h2>
+                    <div class="demo-group wrap">
+                        <div class="mdc-card demo-card mdc-elevation--z4">
+                            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+                                <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url('https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg');"></div>
+                                <div class="demo-card__primary">
+                                    <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                                    <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+                                </div>
+                                <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+                                <div class="mdc-card__ripple"></div>
+                            </div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-icons">
+                                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                                        <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        share
+                                    </button>
+                                    <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">
+                                        <div class="mdc-icon-button__ripple"></div>
+                                        more_vert
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </body>
+</html>

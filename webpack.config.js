@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
@@ -8,6 +9,10 @@ module.exports = {
     mode: 'development',
     target: 'web',
     entry: {
+        MDCBundle: path.resolve(__dirname, 'src/styles/MDCBundle.js'),
+        dataTable: path.resolve(__dirname, 'src/documentation/dataTable/dataTable.js'),
+        datePicker: path.resolve(__dirname, 'src/documentation/datePicker/datePicker.js'),
+
         index: path.resolve(__dirname, 'src/index.js'),
         formdemo: path.resolve(__dirname, 'src/documentation/formdemo/formdemo.js'),
         projectissues: path.resolve(__dirname, 'src/documentation/projectissues/projectIssues.js'),
@@ -23,6 +28,7 @@ module.exports = {
         filename: '[name][contenthash].js',
         clean: true,
         assetModuleFilename: '[name][ext]',
+        publicPath: '/'
     },
     devtool: 'source-map',
     devServer: {
@@ -84,6 +90,13 @@ module.exports = {
         ],
     },
     plugins: [
+
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+        }),
+
+
         new HtmlWebpackPlugin({
             title: 'Main Page',
             filename: 'index.html',
@@ -113,13 +126,37 @@ module.exports = {
             title: 'Buttons Page',
             filename: 'buttons.html',
             template: 'src/documentation/buttons/buttons.html',
-            chunks: ['topAppBar', 'nav', 'buttons'],
+            chunks: ['MDCBundle'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Card Page',
+            filename: 'card.html',
+            template: 'src/documentation/card/card.html',
+            chunks: ['MDCBundle'],
         }),
         new HtmlWebpackPlugin({
             title: 'Checkbox Page',
             filename: 'checkbox.html',
             template: 'src/documentation/checkbox/checkbox.html',
-            chunks: ['topAppBar', 'nav', 'checkbox'],
+            chunks: ['MDCBundle'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Data Table Page',
+            filename: 'dataTable.html',
+            template: 'src/documentation/dataTable/dataTable.html',
+            chunks: ['MDCBundle','dataTable'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Select Input Page',
+            filename: 'selectInput.html',
+            template: 'src/documentation/selectInput/selectInput.html',
+            chunks: ['MDCBundle'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Date Picker Page',
+            filename: 'datePicker.html',
+            template: 'src/documentation/datePicker/datePicker.html',
+            chunks: ['MDCBundle','datePicker'],
         }),
         new HtmlWebpackPartialsPlugin({
             path: path.join(__dirname, './src/component/nav.html'),
